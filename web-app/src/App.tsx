@@ -1,12 +1,11 @@
-import Alert from './components/Alert';
-import Button from './components/Button';
+import ActionButtons from './components/ActionButtons';
 import Footer from './components/Footer';
-import ListGroup from './components/ListGroup';
 import Navigation from './components/Navigation';
-import Message from './Message';
 
 function App() {
   let items = ['New York', 'San Fransisco', 'Tokyo', 'London', 'Paris'];
+
+  const screen = {title: 'Buyers', subtile:'Manage buyer details'}
 
   return (
     <div>
@@ -17,13 +16,21 @@ function App() {
       {/* <Button onClick={() => console.log('Clicked!')}>My Button</Button> */}
       <Navigation />
 
+      <ActionButtons/>
+
       {/* Main content container */}
-      <main className="flex-1 p-4 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          {/* Replace this with your actual content */}
-          <h1 className="text-2xl font-bold">Main Content</h1>
-          <p>This section expands to fill space between header and footer.</p>
+      <main className="flex-1 p-4 ">
+
+        {/* Header */}
+        <div className="mx-auto bg-gray-100 border p-3">
+          <h1 className="text-2xl font-bold">{screen && screen.title}</h1>
+          <p>{screen && screen.subtile}</p>
         </div>
+
+        <div className='bg-gray-100 border p-2'>
+          <h1>Content</h1>
+        </div>
+        
       </main>
 
 
