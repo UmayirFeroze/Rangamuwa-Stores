@@ -14,10 +14,12 @@ const MenuItems = () => {
     {name: 'day price', Icon: CurrencyDollarIcon, onClick: () => alert('Clicked day price')},
     {name: 'sales report', Icon: PresentationChartLineIcon, onClick: () => alert('Clicked sales report')},
     {name: 'settings', Icon: Cog8ToothIcon, onClick: () => alert('Clicked settings')},
+    {name: 'settings', Icon: Cog8ToothIcon, onClick: () => alert('Clicked settings')},
+    {name: 'settings', Icon: Cog8ToothIcon, onClick: () => alert('Clicked settings')},
   ]
 
   return (
-    <div className="my-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    <div className="my-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
       {items.map((item, index) => (
         <MenuItem
           key={index}
